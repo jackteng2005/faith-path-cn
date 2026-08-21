@@ -28,7 +28,7 @@ export function SiteFooter() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 text-sm">
+        <div className="flex flex-col gap-2 text-sm">
           {navItems.map((item) => (
             <Link key={item.to} to={item.to} className="opacity-80 transition-opacity hover:opacity-100">
               {item.label}

@@ -6,12 +6,7 @@ import logo from "@/assets/logo.png.asset.json";
 export const navItems = [
   { to: "/", label: "首页" },
   { to: "/about", label: "关于我们" },
-  { to: "/location", label: "聚会地点" },
-  { to: "/events", label: "每周活动" },
-  { to: "/courses", label: "课程" },
-  { to: "/resources", label: "资源" },
-  { to: "/contact", label: "联系我们" },
-  { to: "/give", label: "奉献" },
+  { to: "/contact", label: "联系与地点" },
 ] as const;
 
 export function SiteHeader() {
