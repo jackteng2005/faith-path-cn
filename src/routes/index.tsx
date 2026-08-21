@@ -42,6 +42,40 @@ const weekly = [
   { day: "周日 上午", title: "基督信仰课程", note: "小组式查经与答疑" },
 ];
 
+const courses = [
+  {
+    name: "基督信仰课程",
+    time: "每周日上午",
+    audience: "对信仰有兴趣的朋友",
+    desc: "用八周时间，从「神是谁」谈到「我该如何回应」。可以随时提问、随时开始，也可以只是来听听看。",
+  },
+  {
+    name: "初学者英语班",
+    time: "每周一 11:15",
+    audience: "新移民、家庭主妇、长者",
+    desc: "由本地老师带领的免费英语课程，从日常对话开始，帮助您更自在地在新西兰生活。",
+  },
+  {
+    name: "儿童主日课程",
+    time: "每周日上午",
+    audience: "3–12 岁儿童",
+    desc: "用故事、诗歌与手作，帮助孩子在双语环境中认识圣经，也交到好朋友。",
+  },
+  {
+    name: "洗礼预备班",
+    time: "按季开班",
+    audience: "预备受洗的弟兄姊妹",
+    desc: "系统整理信仰基础，陪伴您走出信心的第一步。",
+  },
+];
+
+const faqs = [
+  { q: "我从来没去过教会，可以来吗？", a: "当然可以。您只需要带着自己来，其余的我们会陪您一起熟悉。" },
+  { q: "需要穿正式服装吗？", a: "不需要，穿您觉得舒适的衣服就好。" },
+  { q: "崇拜大约多久？", a: "约 90 分钟，结束后有茶点时间，可自由留下交流。" },
+  { q: "孩子可以一起来吗？", a: "非常欢迎。崇拜同时段设有儿童主日课程与哺乳室。" },
+];
+
 function Index() {
   return (
     <>
@@ -76,7 +110,7 @@ function Index() {
 
             <div className="mt-8">
               <Link
-                to="/location"
+                to="/contact"
                 className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 <MapPin className="size-4" />
@@ -100,13 +134,10 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-cream py-20">
+      <section id="weekly" className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-3xl font-bold text-primary gold-rule">每周聚会</h2>
-            <Link to="/events" className="text-sm text-accent underline-offset-4 hover:underline">
-              查看全部活动
-            </Link>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {weekly.map((w) => (
@@ -119,6 +150,36 @@ function Index() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="courses" className="mx-auto max-w-6xl px-5 py-20">
+        <h2 className="text-3xl font-bold text-primary gold-rule">课程与成长</h2>
+        <p className="mt-4 text-sm text-muted-foreground">所有课程完全免费，不需要任何信仰背景。带着问题来，就是最好的开始。</p>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {courses.map((c) => (
+            <article key={c.name} className="rounded-xl border border-border bg-card p-8">
+              <h3 className="text-xl font-semibold text-primary">{c.name}</h3>
+              <p className="mt-2 text-sm text-accent">
+                {c.time} ｜ {c.audience}
+              </p>
+              <p className="mt-4 text-sm leading-7 text-muted-foreground">{c.desc}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-cream py-20">
+        <div className="mx-auto max-w-4xl px-5">
+          <h2 className="text-2xl font-bold text-primary gold-rule">新朋友常见问题</h2>
+          <dl className="mt-8 grid gap-4 md:grid-cols-2">
+            {faqs.map((f) => (
+              <div key={f.q} className="rounded-lg bg-card p-6">
+                <dt className="font-semibold text-primary">{f.q}</dt>
+                <dd className="mt-2 text-sm leading-7 text-muted-foreground">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
