@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BookOpen, Clock, Heart, MapPin, Phone, Users } from "lucide-react";
+import { BookOpen, Clock, Heart, MapPin, Users } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -68,10 +68,6 @@ const gatherings = [
   },
 ];
 
-const prayerContacts = [
-  { name: "Susan Lin", phone: "021 031 9446" },
-  { name: "Michael Chieng", phone: "021 152 3660" },
-];
 
 function Index() {
   return (
@@ -155,31 +151,6 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-20">
-        <div className="rounded-2xl bg-primary px-6 py-16 text-primary-foreground md:px-16">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold gold-rule">疑问与代祷</h2>
-            <p className="mt-4 text-base leading-8 opacity-90">
-              如果您有任何疑问或需要代祷，欢迎随时联系我们的同工。我们乐意与您同行。
-            </p>
-            <div className="mt-10 grid gap-6 sm:grid-cols-2">
-              {prayerContacts.map((c) => (
-                <a
-                  key={c.name}
-                  href={`tel:${c.phone.replace(/\s/g, "")}`}
-                  className="flex items-center justify-center gap-3 rounded-xl bg-primary-foreground/10 px-6 py-5 transition-colors hover:bg-primary-foreground/20"
-                >
-                  <Phone className="size-5 text-accent" />
-                  <div className="text-left">
-                    <p className="font-semibold">{c.name}</p>
-                    <p className="text-sm opacity-90">{c.phone}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="mx-auto max-w-3xl px-5 py-20 text-center">
         <p className="text-xl leading-9 text-primary">
