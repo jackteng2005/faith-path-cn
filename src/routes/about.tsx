@@ -5,9 +5,9 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "关于我们 | 新西兰基督教会 亚洲团契" },
-      { name: "description", content: "认识我们的信仰、异象与这个由华人及亚洲家庭组成的奥克兰双语教会大家庭。" },
+      { name: "description", content: "认识我们的信仰、使命与宗旨，以及这个由华人及亚洲家庭组成的奥克兰双语教会大家庭。" },
       { property: "og:title", content: "关于我们 · 新西兰基督教会 亚洲团契" },
-      { property: "og:description", content: "认识我们的信仰、异象与奥克兰华人双语教会大家庭。" },
+      { property: "og:description", content: "认识我们的信仰、使命与宗旨，以及奥克兰华人双语教会大家庭。" },
     ],
   }),
   component: About,
@@ -17,6 +17,20 @@ const beliefs = [
   { title: "圣经是神的话", text: "我们相信圣经是神所默示的，是信仰与生活最高的准则。" },
   { title: "耶稣基督是救主", text: "因着耶稣的死与复活，人得以与神和好，白白得着永生的恩典。" },
   { title: "教会是神的家", text: "我们彼此相爱、彼此担当，让每一位来到的人都被看见、被接纳。" },
+];
+
+const resources = [
+  { title: "主日讲道回顾", desc: "错过了主日？每周讲道录音与讲章大纲会在周三前更新。" },
+  { title: "每日灵修材料", desc: "十分钟的经文与默想，帮助您在忙碌的一周里与神保持连结。" },
+  { title: "一年读经计划", desc: "简体中文版读经进度表，可下载打印，也适合小组一同进行。" },
+  { title: "诗歌与敬拜歌单", desc: "主日常唱的中英文诗歌，方便您在家中一同敬拜。" },
+];
+
+const faqs = [
+  { q: "我从来没去过教会，可以来吗？", a: "当然可以。您只需要带着自己来，其余的我们会陪您一起熟悉。" },
+  { q: "需要穿正式服装吗？", a: "不需要，穿您觉得舒适的衣服就好。" },
+  { q: "崇拜大约多久？", a: "约 90 分钟，结束后有茶点时间，可自由留下交流。" },
+  { q: "孩子可以一起来吗？", a: "非常欢迎。崇拜同时段设有儿童主日课程与哺乳室。" },
 ];
 
 function About() {
@@ -30,7 +44,7 @@ function About() {
 
       <section className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-2">
         <div>
-          <h2 className="text-2xl font-bold text-primary gold-rule">我们的异象</h2>
+          <h2 className="text-2xl font-bold text-primary gold-rule">我们的使命与宗旨</h2>
           <p className="mt-6 text-base leading-8 text-muted-foreground">
             我们盼望成为奥克兰亚裔社区的属灵港湾：让刚踏上这片土地的人有人同行，
             让在忙碌中疲惫的人重新得力，让下一代在双语与双文化中稳稳扎根于信仰。
@@ -61,6 +75,32 @@ function About() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-20">
+        <h2 className="text-2xl font-bold text-primary gold-rule">属灵成长资源</h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {resources.map((r) => (
+            <article key={r.title} className="rounded-xl border border-border bg-card p-7">
+              <h3 className="text-lg font-semibold text-primary">{r.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">{r.desc}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-cream py-16">
+        <div className="mx-auto max-w-4xl px-5">
+          <h2 className="text-2xl font-bold text-primary gold-rule">新朋友常见问题</h2>
+          <dl className="mt-8 grid gap-4 md:grid-cols-2">
+            {faqs.map((f) => (
+              <div key={f.q} className="rounded-lg bg-card p-6">
+                <dt className="font-semibold text-primary">{f.q}</dt>
+                <dd className="mt-2 text-sm leading-7 text-muted-foreground">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
     </>
