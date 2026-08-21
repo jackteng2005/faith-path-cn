@@ -158,7 +158,7 @@ function Index() {
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="rounded-2xl bg-primary px-6 py-16 text-primary-foreground md:px-16">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold gold-rule-light">疑问与代祷</h2>
+            <h2 className="text-3xl font-bold gold-rule">疑问与代祷</h2>
             <p className="mt-4 text-base leading-8 opacity-90">
               如果您有任何疑问或需要代祷，欢迎随时联系我们的同工。我们乐意与您同行。
             </p>
