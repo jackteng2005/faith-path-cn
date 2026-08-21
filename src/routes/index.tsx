@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BookOpen, Clock, Heart, MapPin, Phone, Users } from "lucide-react";
+import { BookOpen, Clock, Heart, MapPin, Users } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -68,10 +68,6 @@ const gatherings = [
   },
 ];
 
-const prayerContacts = [
-  { name: "Susan Lin", phone: "021 031 9446" },
-  { name: "Michael Chieng", phone: "021 152 3660" },
-];
 
 function Index() {
   return (
