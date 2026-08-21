@@ -26,12 +26,6 @@ const resources = [
   { title: "诗歌与敬拜歌单", desc: "主日常唱的中英文诗歌，方便您在家中一同敬拜。" },
 ];
 
-const faqs = [
-  { q: "我从来没去过教会，可以来吗？", a: "当然可以。您只需要带着自己来，其余的我们会陪您一起熟悉。" },
-  { q: "需要穿正式服装吗？", a: "不需要，穿您觉得舒适的衣服就好。" },
-  { q: "崇拜大约多久？", a: "约 90 分钟，结束后有茶点时间，可自由留下交流。" },
-  { q: "孩子可以一起来吗？", a: "非常欢迎。崇拜同时段设有儿童主日课程与哺乳室。" },
-];
 
 function About() {
   return (
@@ -90,19 +84,6 @@ function About() {
         </div>
       </section>
 
-      <section className="bg-cream py-16">
-        <div className="mx-auto max-w-4xl px-5">
-          <h2 className="text-2xl font-bold text-primary gold-rule">新朋友常见问题</h2>
-          <dl className="mt-8 grid gap-4 md:grid-cols-2">
-            {faqs.map((f) => (
-              <div key={f.q} className="rounded-lg bg-card p-6">
-                <dt className="font-semibold text-primary">{f.q}</dt>
-                <dd className="mt-2 text-sm leading-7 text-muted-foreground">{f.a}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
     </>
   );
 }
