@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BookOpen, Clock, Heart, MapPin, Users } from "lucide-react";
+import { BookOpen, Clock, Heart, MapPin, Phone, Users } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 
 export const Route = createFileRoute("/")({
@@ -35,40 +35,43 @@ const highlights = [
   },
 ];
 
-const weekly = [
-  { day: "周一 11:15", title: "初学者英语班", note: "免费英语学习，欢迎新移民" },
-  { day: "周三 10:00", title: "华语长者聚会", note: "唱诗、分享与午间团契" },
-  { day: "周日 10:45", title: "中英双语主日崇拜", note: "同场设儿童主日课程" },
-  { day: "周日 上午", title: "基督信仰课程", note: "小组式查经与答疑" },
-];
-
-const courses = [
+const gatherings = [
   {
-    name: "基督信仰课程",
-    time: "每周日上午",
-    audience: "对信仰有兴趣的朋友",
-    desc: "用八周时间，从「神是谁」谈到「我该如何回应」。可以随时提问、随时开始，也可以只是来听听看。",
-  },
-  {
-    name: "初学者英语班",
-    time: "每周一 11:15",
-    audience: "新移民、家庭主妇、长者",
+    day: "周一 11:15",
+    title: "初学者英语班",
+    note: "免费英语学习，欢迎新移民",
     desc: "由本地老师带领的免费英语课程，从日常对话开始，帮助您更自在地在新西兰生活。",
   },
   {
-    name: "儿童主日课程",
-    time: "每周日上午",
-    audience: "3–12 岁儿童",
-    desc: "用故事、诗歌与手作，帮助孩子在双语环境中认识圣经，也交到好朋友。",
+    day: "周三 10:00",
+    title: "华语长者聚会",
+    note: "唱诗、分享与午间团契",
+    desc: "为华语长者预备的团契时间，一起唱诗、分享生活，彼此代祷扶持。",
   },
   {
-    name: "洗礼预备班",
-    time: "按季开班",
-    audience: "预备受洗的弟兄姊妹",
+    day: "周日 10:45",
+    title: "中英双语主日崇拜",
+    note: "同场设儿童主日课程",
+    desc: "崇拜同时提供中文与英文，一家人不分世代都能一同敬拜、一同明白神的话。",
+  },
+  {
+    day: "周日 上午",
+    title: "基督信仰课程",
+    note: "小组式查经与答疑",
+    desc: "用八周时间，从「神是谁」谈到「我该如何回应」。可以随时提问、随时开始。",
+  },
+  {
+    day: "按季开班",
+    title: "洗礼预备班",
+    note: "预备受洗的弟兄姊妹",
     desc: "系统整理信仰基础，陪伴您走出信心的第一步。",
   },
 ];
 
+const prayerContacts = [
+  { name: "Susan Lin", phone: "021 031 9446" },
+  { name: "Michael Chieng", phone: "021 152 3660" },
+];
 
 function Index() {
   return (
@@ -128,41 +131,55 @@ function Index() {
         </div>
       </section>
 
-      <section id="weekly" className="bg-cream py-20">
+      <section id="gatherings" className="bg-cream py-20">
         <div className="mx-auto max-w-6xl px-5">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 className="text-3xl font-bold text-primary gold-rule">每周聚会</h2>
-          </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {weekly.map((w) => (
-              <div key={w.title} className="flex items-baseline gap-5 rounded-lg bg-card p-6">
-                <span className="w-24 shrink-0 text-sm font-semibold text-crimson">{w.day}</span>
-                <div>
-                  <p className="font-semibold text-primary">{w.title}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{w.note}</p>
+          <h2 className="text-3xl font-bold text-primary gold-rule">每周聚会与课程</h2>
+          <p className="mt-4 text-sm text-muted-foreground">
+            所有活动完全免费，不需要任何信仰背景。带着问题来，就是最好的开始。
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {gatherings.map((g) => (
+              <article
+                key={g.title}
+                className="rounded-xl border border-border bg-card p-7"
+              >
+                <div className="flex items-baseline gap-4">
+                  <span className="shrink-0 text-sm font-semibold text-crimson">{g.day}</span>
+                  <h3 className="text-lg font-semibold text-primary">{g.title}</h3>
                 </div>
-              </div>
+                <p className="mt-2 text-sm text-accent">{g.note}</p>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground">{g.desc}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="courses" className="mx-auto max-w-6xl px-5 py-20">
-        <h2 className="text-3xl font-bold text-primary gold-rule">课程与成长</h2>
-        <p className="mt-4 text-sm text-muted-foreground">所有课程完全免费，不需要任何信仰背景。带着问题来，就是最好的开始。</p>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {courses.map((c) => (
-            <article key={c.name} className="rounded-xl border border-border bg-card p-8">
-              <h3 className="text-xl font-semibold text-primary">{c.name}</h3>
-              <p className="mt-2 text-sm text-accent">
-                {c.time} ｜ {c.audience}
-              </p>
-              <p className="mt-4 text-sm leading-7 text-muted-foreground">{c.desc}</p>
-            </article>
-          ))}
+      <section className="mx-auto max-w-6xl px-5 py-20">
+        <div className="rounded-2xl bg-primary px-6 py-16 text-primary-foreground md:px-16">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold gold-rule">疑问与代祷</h2>
+            <p className="mt-4 text-base leading-8 opacity-90">
+              如果您有任何疑问或需要代祷，欢迎随时联系我们的同工。我们乐意与您同行。
+            </p>
+            <div className="mt-10 grid gap-6 sm:grid-cols-2">
+              {prayerContacts.map((c) => (
+                <a
+                  key={c.name}
+                  href={`tel:${c.phone.replace(/\s/g, "")}`}
+                  className="flex items-center justify-center gap-3 rounded-xl bg-primary-foreground/10 px-6 py-5 transition-colors hover:bg-primary-foreground/20"
+                >
+                  <Phone className="size-5 text-accent" />
+                  <div className="text-left">
+                    <p className="font-semibold">{c.name}</p>
+                    <p className="text-sm opacity-90">{c.phone}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
-
 
       <section className="mx-auto max-w-3xl px-5 py-20 text-center">
         <p className="text-xl leading-9 text-primary">
