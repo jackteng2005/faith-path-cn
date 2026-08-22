@@ -159,12 +159,6 @@ export const home = {
         note: "Small-group study and open Q&A",
         desc: "Eight weeks moving from 'Who is God?' to 'How do I respond?' Ask anything, and start any week.",
       },
-      {
-        day: "Each term",
-        title: "Baptism preparation",
-        note: "For those preparing to be baptised",
-        desc: "A clear walk through the foundations of faith as you take your first step of commitment.",
-      },
     ],
     verse:
       "\u201cFor God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.\u201d",
