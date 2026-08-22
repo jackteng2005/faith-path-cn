@@ -88,12 +88,6 @@ export const home = {
         note: "小组式查经与答疑",
         desc: "用八周时间，从「神是谁」谈到「我该如何回应」。可以随时提问、随时开始。",
       },
-      {
-        day: "按季开班",
-        title: "洗礼预备班",
-        note: "预备受洗的弟兄姊妹",
-        desc: "系统整理信仰基础，陪伴您走出信心的第一步。",
-      },
     ],
     verse: "「神爱世人，甚至将他的独生子赐给他们，叫一切信他的，不至灭亡，反得永生。」",
     verseRef: "约翰福音 3:16",
@@ -158,12 +152,6 @@ export const home = {
         title: "Christianity Explained",
         note: "Small-group study and open Q&A",
         desc: "Eight weeks moving from 'Who is God?' to 'How do I respond?' Ask anything, and start any week.",
-      },
-      {
-        day: "Each term",
-        title: "Baptism preparation",
-        note: "For those preparing to be baptised",
-        desc: "A clear walk through the foundations of faith as you take your first step of commitment.",
       },
     ],
     verse:
