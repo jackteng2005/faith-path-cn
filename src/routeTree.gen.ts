@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CoursesRouteImport } from './routes/courses'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as GiveRouteImport } from './routes/give'
+import { Route as LiveRouteImport } from './routes/live'
 import { Route as LocationRouteImport } from './routes/location'
 import { Route as ResourcesRouteImport } from './routes/resources'
 
@@ -48,6 +49,11 @@ const GiveRoute = GiveRouteImport.update({
   path: '/give',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LiveRoute = LiveRouteImport.update({
+  id: '/live',
+  path: '/live',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LocationRoute = LocationRouteImport.update({
   id: '/location',
   path: '/location',
@@ -66,6 +72,7 @@ export interface FileRoutesByFullPath {
   '/courses': typeof CoursesRoute
   '/events': typeof EventsRoute
   '/give': typeof GiveRoute
+  '/live': typeof LiveRoute
   '/location': typeof LocationRoute
   '/resources': typeof ResourcesRoute
 }
@@ -76,6 +83,7 @@ export interface FileRoutesByTo {
   '/courses': typeof CoursesRoute
   '/events': typeof EventsRoute
   '/give': typeof GiveRoute
+  '/live': typeof LiveRoute
   '/location': typeof LocationRoute
   '/resources': typeof ResourcesRoute
 }
@@ -87,6 +95,7 @@ export interface FileRoutesById {
   '/courses': typeof CoursesRoute
   '/events': typeof EventsRoute
   '/give': typeof GiveRoute
+  '/live': typeof LiveRoute
   '/location': typeof LocationRoute
   '/resources': typeof ResourcesRoute
 }
@@ -99,6 +108,7 @@ export interface FileRouteTypes {
     | '/courses'
     | '/events'
     | '/give'
+    | '/live'
     | '/location'
     | '/resources'
   fileRoutesByTo: FileRoutesByTo
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/courses'
     | '/events'
     | '/give'
+    | '/live'
     | '/location'
     | '/resources'
   id:
@@ -119,6 +130,7 @@ export interface FileRouteTypes {
     | '/courses'
     | '/events'
     | '/give'
+    | '/live'
     | '/location'
     | '/resources'
   fileRoutesById: FileRoutesById
@@ -130,6 +142,7 @@ export interface RootRouteChildren {
   CoursesRoute: typeof CoursesRoute
   EventsRoute: typeof EventsRoute
   GiveRoute: typeof GiveRoute
+  LiveRoute: typeof LiveRoute
   LocationRoute: typeof LocationRoute
   ResourcesRoute: typeof ResourcesRoute
 }
@@ -178,6 +191,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GiveRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/live': {
+      id: '/live'
+      path: '/live'
+      fullPath: '/live'
+      preLoaderRoute: typeof LiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/location': {
       id: '/location'
       path: '/location'
@@ -202,6 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   CoursesRoute: CoursesRoute,
   EventsRoute: EventsRoute,
   GiveRoute: GiveRoute,
+  LiveRoute: LiveRoute,
   LocationRoute: LocationRoute,
   ResourcesRoute: ResourcesRoute,
 }
