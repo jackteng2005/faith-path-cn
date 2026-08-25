@@ -98,6 +98,42 @@ function Index() {
         </div>
       </section>
 
+      <section id="live" className="mx-auto max-w-6xl px-5 py-20">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="text-3xl font-bold text-primary gold-rule">{c.liveTitle}</h2>
+            <div className="mt-8 aspect-video overflow-hidden rounded-xl border border-border bg-card">
+              <div className="flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
+                <div className="flex size-16 items-center justify-center rounded-full bg-crimson/10">
+                  <Video className="size-8 text-crimson" />
+                </div>
+                <p className="text-sm text-muted-foreground">{c.livePlaceholder}</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-bold text-primary gold-rule">{c.previousTitle}</h2>
+            <ul className="mt-8 space-y-4">
+              {c.previousRecords.map((r, i) => (
+                <li
+                  key={i}
+                  className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:bg-accent/5"
+                >
+                  <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                    <Play className="size-4 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-primary">{r.title}</p>
+                    <p className="text-xs text-muted-foreground">{r.date}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-3xl px-5 py-20 text-center">
         <p className="text-xl leading-9 text-primary">{c.verse}</p>
         <p className="mt-4 text-sm tracking-widest text-accent">{c.verseRef}</p>
