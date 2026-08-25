@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { BookOpen, Clock, Heart, MapPin, Users } from "lucide-react";
+import { BookOpen, Clock, Heart, MapPin, Play, Users, Video } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import { useLang } from "@/lib/i18n";
 import { home } from "@/lib/content";
