@@ -61,12 +61,13 @@ export function SiteHeader() {
         <nav className="border-t border-border bg-card px-5 py-3 lg:hidden">
           {items.map((item) => (
             <Link
-              key={item.to}
+              key={`${item.to}-${item.label}`}
               to={item.to}
+              hash={item.hash}
               onClick={() => setOpen(false)}
               className="block border-b border-border/60 py-3 text-sm text-foreground last:border-0"
               activeProps={{ className: "text-accent font-semibold" }}
-              activeOptions={{ exact: item.to === "/" }}
+              activeOptions={{ exact: item.to === "/" && !item.hash }}
             >
               {item.label}
             </Link>
