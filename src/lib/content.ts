@@ -163,6 +163,51 @@ export const home = {
   },
 } as const;
 
+export const live = {
+  zh: {
+    meta: {
+      title: "线上直播与录像 | 新西兰基督教会 亚洲团契",
+      description: "无法到现场？欢迎在线参与我们的主日崇拜直播，或观看往期聚会录像。",
+      ogTitle: "线上直播与录像 · 新西兰基督教会 亚洲团契",
+      ogDescription: "在线参与主日崇拜直播，或回看往期聚会录像。",
+    },
+    eyebrow: "ONLINE",
+    heading: "线上直播与录像",
+    intro: "无法亲自前来也没关系。每主日上午 10:45，我们会在 YouTube 同步直播崇拜；错过了也可以随时回看往期录像。",
+    liveTitle: "线上直播",
+    livePlaceholder: "直播链接即将添加",
+    previousTitle: "往期聚会录像",
+    previousRecords: [
+      { title: "主日崇拜录像", date: "2026 年 8 月 23 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 16 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 9 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 2 日" },
+    ],
+  },
+  en: {
+    meta: {
+      title: "Live Stream & Recordings | Church of Christ NZ Asian Fellowship",
+      description:
+        "Can't make it in person? Join our Sunday worship live stream online, or watch recordings of previous gatherings.",
+      ogTitle: "Live Stream & Recordings · Church of Christ NZ Asian Fellowship",
+      ogDescription: "Join Sunday worship online, or catch up on previous services.",
+    },
+    eyebrow: "ONLINE",
+    heading: "Live Stream & Recordings",
+    intro:
+      "You are just as welcome online. We stream our Sunday service on YouTube at 10:45am, and past gatherings stay available to watch any time.",
+    liveTitle: "Live Stream",
+    livePlaceholder: "Live stream link coming soon",
+    previousTitle: "Previous Sermons",
+    previousRecords: [
+      { title: "Sunday worship recording", date: "23 Aug 2026" },
+      { title: "Sunday worship recording", date: "16 Aug 2026" },
+      { title: "Sunday worship recording", date: "9 Aug 2026" },
+      { title: "Sunday worship recording", date: "2 Aug 2026" },
+    ],
+  },
+} as const;
+
 export const about = {
   zh: {
     meta: {
