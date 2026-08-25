@@ -264,8 +264,8 @@ export const contact = {
     staffTitle: "直接联系同工",
     staffText: "若您有疑问或需要代祷，欢迎致电或发短信：",
     staff: [
-      { name: "Susan Lin 林姊妹", phone: "021 *** ****" },
-      { name: "Michael Chieng 钱弟兄", phone: "021 *** ****" },
+      { name: "***", phone: "021 *** ****" },
+      { name: "***", phone: "021 *** ****" },
     ],
 
     addressTitle: "地址",
@@ -293,8 +293,8 @@ export const contact = {
     staffTitle: "Talk to someone directly",
     staffText: "For questions or prayer, feel free to call or text:",
     staff: [
-      { name: "Susan Lin", phone: "021 *** ****" },
-      { name: "Michael Chieng", phone: "021 *** ****" },
+      { name: "***", phone: "021 *** ****" },
+      { name: "***", phone: "021 *** ****" },
     ],
 
     addressTitle: "Address",
