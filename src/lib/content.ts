@@ -2,15 +2,15 @@ import type { Lang } from "./i18n";
 
 export const nav = {
   zh: [
-    { to: "/", label: "首页" },
-    { to: "/about", label: "关于我们" },
-    { to: "/contact", label: "联系与地点" },
+    { to: "/", label: "首页", hash: undefined },
+    { to: "/about", label: "关于我们", hash: undefined },
+    { to: "/contact", label: "联系与地点", hash: undefined },
     { to: "/", label: "直播", hash: "live" },
   ],
   en: [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About Us" },
-    { to: "/contact", label: "Visit & Contact" },
+    { to: "/", label: "Home", hash: undefined },
+    { to: "/about", label: "About Us", hash: undefined },
+    { to: "/contact", label: "Visit & Contact", hash: undefined },
     { to: "/", label: "Live", hash: "live" },
   ],
 } as const;
