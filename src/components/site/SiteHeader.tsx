@@ -26,7 +26,7 @@ export function SiteHeader() {
               <Link
                 key={`${item.to}-${item.label}`}
                 to={item.to}
-                hash={item.hash}
+                {...(item.hash ? { hash: item.hash } : {})}
                 className="text-sm tracking-wide text-muted-foreground transition-colors hover:text-primary"
                 activeProps={{ className: "text-accent font-semibold" }}
                 activeOptions={{ exact: item.to === "/" && !item.hash }}
@@ -63,7 +63,7 @@ export function SiteHeader() {
             <Link
               key={`${item.to}-${item.label}`}
               to={item.to}
-              hash={item.hash}
+              {...(item.hash ? { hash: item.hash } : {})}
               onClick={() => setOpen(false)}
               className="block border-b border-border/60 py-3 text-sm text-foreground last:border-0"
               activeProps={{ className: "text-accent font-semibold" }}
