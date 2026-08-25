@@ -4,14 +4,14 @@ export const nav = {
   zh: [
     { to: "/", label: "首页", hash: undefined },
     { to: "/about", label: "关于我们", hash: undefined },
+    { to: "/live", label: "直播", hash: undefined },
     { to: "/contact", label: "联系与地点", hash: undefined },
-    { to: "/", label: "直播", hash: "live" },
   ],
   en: [
     { to: "/", label: "Home", hash: undefined },
     { to: "/about", label: "About Us", hash: undefined },
+    { to: "/live", label: "Live", hash: undefined },
     { to: "/contact", label: "Visit & Contact", hash: undefined },
-    { to: "/", label: "Live", hash: "live" },
   ],
 } as const;
 
@@ -94,15 +94,6 @@ export const home = {
     verse: "「神爱世人，甚至将他的独生子赐给他们，叫一切信他的，不至灭亡，反得永生。」",
     verseRef: "约翰福音 3:16",
     verseCta: "我想了解更多",
-    liveTitle: "线上直播",
-    livePlaceholder: "直播链接即将添加",
-    previousTitle: "往期聚会录像",
-    previousRecords: [
-      { title: "主日崇拜录像", date: "2026 年 8 月 23 日" },
-      { title: "主日崇拜录像", date: "2026 年 8 月 16 日" },
-      { title: "主日崇拜录像", date: "2026 年 8 月 9 日" },
-      { title: "主日崇拜录像", date: "2026 年 8 月 2 日" },
-    ],
   },
   en: {
     meta: {
@@ -169,6 +160,42 @@ export const home = {
       "\u201cFor God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.\u201d",
     verseRef: "John 3:16",
     verseCta: "I'd like to know more",
+  },
+} as const;
+
+export const live = {
+  zh: {
+    meta: {
+      title: "线上直播与录像 | 新西兰基督教会 亚洲团契",
+      description: "无法到现场？欢迎在线参与我们的主日崇拜直播，或观看往期聚会录像。",
+      ogTitle: "线上直播与录像 · 新西兰基督教会 亚洲团契",
+      ogDescription: "在线参与主日崇拜直播，或回看往期聚会录像。",
+    },
+    eyebrow: "ONLINE",
+    heading: "线上直播与录像",
+    intro: "无法亲自前来也没关系。每主日上午 10:45，我们会在 YouTube 同步直播崇拜；错过了也可以随时回看往期录像。",
+    liveTitle: "线上直播",
+    livePlaceholder: "直播链接即将添加",
+    previousTitle: "往期聚会录像",
+    previousRecords: [
+      { title: "主日崇拜录像", date: "2026 年 8 月 23 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 16 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 9 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 2 日" },
+    ],
+  },
+  en: {
+    meta: {
+      title: "Live Stream & Recordings | Church of Christ NZ Asian Fellowship",
+      description:
+        "Can't make it in person? Join our Sunday worship live stream online, or watch recordings of previous gatherings.",
+      ogTitle: "Live Stream & Recordings · Church of Christ NZ Asian Fellowship",
+      ogDescription: "Join Sunday worship online, or catch up on previous services.",
+    },
+    eyebrow: "ONLINE",
+    heading: "Live Stream & Recordings",
+    intro:
+      "You are just as welcome online. We stream our Sunday service on YouTube at 10:45am, and past gatherings stay available to watch any time.",
     liveTitle: "Live Stream",
     livePlaceholder: "Live stream link coming soon",
     previousTitle: "Previous Sermons",
