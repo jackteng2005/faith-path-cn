@@ -5,11 +5,13 @@ export const nav = {
     { to: "/", label: "首页" },
     { to: "/about", label: "关于我们" },
     { to: "/contact", label: "联系与地点" },
+    { to: "/", label: "直播", hash: "live" },
   ],
   en: [
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
     { to: "/contact", label: "Visit & Contact" },
+    { to: "/", label: "Live", hash: "live" },
   ],
 } as const;
 
