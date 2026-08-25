@@ -24,11 +24,12 @@ export function SiteHeader() {
           <nav className="hidden items-center gap-6 lg:flex">
             {items.map((item) => (
               <Link
-                key={item.to}
+                key={`${item.to}-${item.label}`}
                 to={item.to}
+                hash={item.hash}
                 className="text-sm tracking-wide text-muted-foreground transition-colors hover:text-primary"
                 activeProps={{ className: "text-accent font-semibold" }}
-                activeOptions={{ exact: item.to === "/" }}
+                activeOptions={{ exact: item.to === "/" && !item.hash }}
               >
                 {item.label}
               </Link>
