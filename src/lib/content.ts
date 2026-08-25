@@ -92,6 +92,15 @@ export const home = {
     verse: "「神爱世人，甚至将他的独生子赐给他们，叫一切信他的，不至灭亡，反得永生。」",
     verseRef: "约翰福音 3:16",
     verseCta: "我想了解更多",
+    liveTitle: "线上直播",
+    livePlaceholder: "直播链接即将添加",
+    previousTitle: "往期聚会录像",
+    previousRecords: [
+      { title: "主日崇拜录像", date: "2026 年 8 月 23 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 16 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 9 日" },
+      { title: "主日崇拜录像", date: "2026 年 8 月 2 日" },
+    ],
   },
   en: {
     meta: {
@@ -158,6 +167,15 @@ export const home = {
       "\u201cFor God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.\u201d",
     verseRef: "John 3:16",
     verseCta: "I'd like to know more",
+    liveTitle: "Live Stream",
+    livePlaceholder: "Live stream link coming soon",
+    previousTitle: "Previous Sermons",
+    previousRecords: [
+      { title: "Sunday worship recording", date: "23 Aug 2026" },
+      { title: "Sunday worship recording", date: "16 Aug 2026" },
+      { title: "Sunday worship recording", date: "9 Aug 2026" },
+      { title: "Sunday worship recording", date: "2 Aug 2026" },
+    ],
   },
 } as const;
 
