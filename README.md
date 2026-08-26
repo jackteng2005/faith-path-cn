@@ -1,14 +1,22 @@
-# Welcome to your Lovable project
+# 教会网站
+
+I want to build a Chinese version website of this church: "https://ccnz.org.nz/".
+
+I have attached the poster that they have been using and their logo as the first attachment. Build me a website that include the same subpages similar to the last attachment.
+
+This website should be done in Simplified Chinese. However, do not copy the the screenshot and web, take inspiration from their layout and structure and build a website where its main purpose is to attract users to come to the church
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://faith-path-cn.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d5c4ca39-217b-4551-be27-808980202640).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +28,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
